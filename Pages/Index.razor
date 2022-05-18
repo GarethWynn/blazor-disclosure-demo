@@ -1,0 +1,20 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+    <p>
+        This example shows that the name of a parameter and it's value are sent over the SignalR connection. 
+    </p>
+    <p>
+        <ol>
+            <li>Run the project and then navigate to the homepage using Chrome. </li>
+            <li>Press F12 to open the developer tools and select the "network" tab.</li>
+            <li>Refresh the browser page.</li>
+            <li>Select the _blazor?id=XXXX request.</li>
+            <li>Select the "messages" tab and you'll see a list of binary messages'.</li>
+            <li>Scroll through the messages until you find one that has "JS.RenderBatch" near the start.</li>
+        </ol>
+    </p>
+    <p>
+        The message containing the JS.RenderBatch call contains reference to the TestParameter and the value "this should not be sent to the client".
+    </p>
